@@ -1,0 +1,10 @@
+.blank {
+    margin: 0;
+    padding: 0px;
+    border: none;
+    width: 100%;
+}
+
+.list .blk_td {
+    text-indent: 0em;
+}

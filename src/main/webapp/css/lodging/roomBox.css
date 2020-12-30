@@ -1,0 +1,93 @@
+#roomBox {
+    width: 545px;
+    height: 415px;
+    background: white;
+    position: fixed;
+    top: 120px;
+    left: 150px;
+    text-align: center;
+    border: 1px solid #666;
+    -moz-box-shadow: 3px 3px 10px #333333;
+    -webkit-box-shadow: 3px 3px 10px #333333;
+    box-shadow: 3px 3px 10px #333333;
+    visibility: hidden;
+}
+
+#boxTitle {
+    background: #28333F;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    text-indent: 0.5em;
+    text-align: left;
+}
+
+#boxTbl {
+    border: 1px solid #A3A3A3;
+    border-collapse: collapse;
+    clear: right;
+    margin-top: 5px;
+    width: 520px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+#boxTbl td {
+    border: 1px solid #A3A3A3;
+    height: 35px;
+    text-indent: 0.5em;
+}
+
+#boxTbl td:nth-child(1) {
+    width: 125px;
+}
+
+#boxTbl td:nth-child(2) {
+    width: 125px;
+}
+
+#boxTbl td:nth-child(3) {
+    width: 145px;
+}
+
+#boxTbl td:nth-child(4) {
+    width: 125px;
+}
+
+#component {
+    float: right;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 15px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+#roomBox .btn {
+    display: inline-block;
+    width: 100px;
+    height: 33px;
+    border-radius: 3px;
+    line-height: 30px;
+    background: orange;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    text-align: center;
+}
+
+.minTitle {
+    float: left;
+    width: 180px;
+    height: 35px;
+}
+
+.minClose {
+    float: right;
+    width: 35px;
+    height: 35px;
+    background: url('../images/min_close.jpg');
+}
+
+.minClose:hover {
+    cursor: pointer;
+    background: url('../images/min_close_on.jpg');
+}

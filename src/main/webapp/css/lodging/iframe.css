@@ -1,0 +1,39 @@
+body {
+    background: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+#banner {
+    font-size: 19px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    height: 55px;
+    color: #666;
+    line-height: 55px;
+    background: #EAEAEA;
+    text-indent: .8em;
+}
+
+[type='text'] {
+    height: 30px;
+    font-size: 17px;
+    color: #5F5F5F;
+    padding: 0px 0px;
+    text-indent: 0.3em;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+[type=button] {
+    width: 100px;
+    height: 32px;
+    font-family: Courier New, \5FAE\8F6F\96C5\9ED1;
+    font-size: 16px;
+    color: #5F5F5F;
+}
+
+select {
+    font-family: Courier New, \5FAE\8F6F\96C5\9ED1;
+    font-size: 16px;
+    width: 160px;
+    height: 34px;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gec.dao.UserDao">
+
+    <!--根据账号查询用户-->
+    <select id="getUserByAccount" parameterType="string" resultType="com.gec.domain.User">
+        select * from user where account=#{account}
+    </select>
+
+
+    <!--获取全部用户-->
+    <!--一对一查询-->
+    <select id="getUserList" resultMap="userMap">
+        select user.*,role.* from user ,role where user.roleId=role.id
+    </select>
+
+    <!--根据用户Id获取用户-->
+    <select id="getUserById" parameterType="string" resultType="com.gec.domain.User">
+        select * from user where id = #{id}
+    </select>
+
+
+    <!--更新用户-->
+    <select id="updateUser" parameterType="user">
+        UPDATE USER
+        <set>
+            <if test="nickName!=null">
+                nickname=#{nickName},
+            </if>
+            <if test="password!=null">
+                PASSWORD=#{password},
+            </if>
+            <if test="sex!=null">
+                sex=#{sex},
+            </if>
+            <if test="roleId!=null">
+                roleId=#{roleId}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+
+    <!--新增用户-->
+    <insert id="insertUser" parameterType="com.gec.domain.User">
+        INSERT INTO USER (id, account, nickname, password,no,sex, roleId)
+        VALUES (#{id}, #{account}, #{nickName}, #{password},#{no},#{sex}, #{roleId})
+    </insert>
+
+    <!--根据用户Id删除用户-->
+    <delete id="delUserById" parameterType="string">
+        delete from user where id=#{id}
+    </delete>
+
+    <!--自定义映射规则(这里是一对一的关系从用户角度看)这里有严重的bug-->
+    <resultMap id="userMap" type="com.gec.domain.User">
+        <id column="id" property="id"/>
+        <result column="account" property="account"/>
+        <result column="nickname" property="nickName"/>
+        <result column="no" property="no"/>
+        <result column="sex" property="sex"/>
+        <result column="password" property="password"/>
+        <result column="createDate" property="createDate"/>
+        <result column="roleId" property="roleId"/>
+
+
+        <association property="role" javaType="com.gec.domain.Role">
+            <id column="id" property="id"></id>
+            <result column="roleName" property="roleName"/>
+            <result column="descript" property="descript"/>
+        </association>
+
+    </resultMap>
+
+
+</mapper>

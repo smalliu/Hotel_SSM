@@ -1,0 +1,38 @@
+body {
+    background: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+#banner {
+    font-size: 19px;
+    font-family: ΢���ź�;
+    height: 55px;
+    color: #666;
+    line-height: 55px;
+    background: #EAEAEA;
+    text-indent: .8em;
+}
+
+[type=text] {
+    height: 32px;
+    font-size: 17px;
+    color: #5F5F5F;
+    font-family: ΢���ź�;
+    text-indent: 0.3em;
+}
+
+[type=button] {
+    width: 100px;
+    height: 32px;
+    font-family: Courier New, ΢���ź�;
+    font-size: 16px;
+    color: #5F5F5F;
+}
+
+select {
+    font-family: Courier New, ΢���ź�;
+    font-size: 16px;
+    width: 160px;
+    height: 32px;
+}

@@ -1,0 +1,85 @@
+table#form1 {
+    margin-top: 15px;
+}
+
+table#form1 td:nth-child(1) {
+    width: 100px;
+    text-align: right;
+}
+
+table#form1 td:nth-child(3) {
+    width: 110px;
+    text-align: right;
+}
+
+table#form1 td:nth-child(5) {
+    width: 110px;
+    text-align: right;
+}
+
+select {
+    width: 184px;
+}
+
+#entryDate, #leaveDate {
+    border: 1px solid #666;
+    cursor: pointer;
+    vertical-align: middle;
+    height: 32px;
+    padding: 0px 0px;
+}
+
+#entryDate {
+    width: 165px;
+}
+
+#leaveDate {
+    width: 175px;
+}
+
+caption {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    font-size: 19px;
+    text-align: left;
+}
+
+.list th:nth-child(1) {
+    width: 160px;
+}
+
+.list th:nth-child(2) {
+    width: 250px;
+}
+
+.list th:nth-child(3) {
+    width: 160px;
+}
+
+.list th:nth-child(4) {
+    width: 160px;
+}
+
+.btn {
+    border: none;
+    width: 105px;
+    height: 45px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #9F9BFF;
+    color: #101010;
+}
+
+[type='button'] {
+    cursor: pointer;
+}
+
+.btnArrow {
+    display: inline-block;
+    cursor: pointer;
+    width: 22px;
+    height: 32px;
+    border: 1px solid #333;
+    background: url('../../images/arr.png');
+    vertical-align: middle;
+    border-left: none;
+}
